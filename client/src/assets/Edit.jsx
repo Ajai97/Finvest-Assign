@@ -31,7 +31,7 @@ function Edit () {
 
 const Update = (e) => {
   e.preventDefault();
-  axios.put("http://localhost:3001/Edit/"+id, {srno, name, image, category, label, price, description})
+  axios.put("https://finvest-assign.vercel.app/Edit/"+id, {srno, name, image, category, label, price, description})
   .then(result => {
     console.log(result)
     navigate('/')
