@@ -6,7 +6,7 @@ const AdddetailsModel=require('./models/Adddetails')
 const app = express()
 app.use(cors(
     {
-        origin : ['frontend url of vercel'],
+        origin : ['https://finvest-assign-fydx.vercel.app'],
         methods : ["POST","GET","PUT"],
         credentials : true
     }
