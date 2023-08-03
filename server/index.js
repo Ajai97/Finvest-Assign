@@ -29,12 +29,12 @@ mongoose.connect(MONGODB_URI, {
 
   app.get('/',(req,res)=>{
     AdddetailsModel.find({})
-    .then(adddeatails=>res.json(adddeatails))
+    .then(adddetails=>res.json(adddetails))
     .catch(err=>res.json(err))
 })
 app.post("/create",(req,res)=>{
     AdddetailsModel.create(req.body)
-    .then(adddeatails=>res.json(adddeatails))
+    .then(adddetails=>res.json(adddetails))
     .catch(err=>res.json(err))
 })
 
@@ -42,7 +42,7 @@ app.post("/create",(req,res)=>{
 app.get('/:id', (req, res) => {
     const id = req.params.id;
     AdddetailsModel.findById({_id:id})
-    .then(adddeatails => res.json(adddeatails))
+    .then(adddetails => res.json(adddetails))
     .catch(err => res.json(err))
 })
 
@@ -56,7 +56,7 @@ app.put('/Edit/:id', (req, res) => {
          label:req.body.label, 
          price:req.body.price, 
          description:req.body.description})
-        .then(adddeatails => res.json(adddeatails))
+        .then(adddetails => res.json(adddetails))
         .catch(err => res.json(err))   
     })
 
