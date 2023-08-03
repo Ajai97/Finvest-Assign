@@ -14,7 +14,7 @@ function Edit () {
   const navigate = useNavigate()
 
   useEffect(()=> {
-    axios.get('http://localhost:3001/Edit/'+id)
+    axios.get('https://finvest-assign.vercel.app/Edit/'+id)
     .then(result => {console.log(result)
       setSn(result.data.srno)
       setName(result.data.name)
