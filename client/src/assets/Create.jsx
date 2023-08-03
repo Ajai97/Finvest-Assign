@@ -14,7 +14,7 @@ function Create() {
     const navigate=useNavigate()
     const Submit=(e)=>{
         e.preventDefault();
-        axios.post("http://finvest-assign.vercel.app/create",{srno,name,image,category,label,price,description})
+        axios.post("https://finvest-assign.vercel.app/create",{srno,name,image,category,label,price,description})
         .then(result=>{
             console.log(result)
         })
